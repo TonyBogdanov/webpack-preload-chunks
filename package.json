@@ -1,0 +1,29 @@
+{
+  "name": "webpack-preload-chunks",
+  "version": "1.0.0",
+  "description": "Webpack plugin for preloading chunk assets during network idling",
+  "main": "src/plugin.es6",
+  "scripts": {
+    "dev": "node ./node_modules/webpack-cli/bin/cli.js --display-error-details --progress --mode=development --config ./webpack.config.js",
+    "build": "node ./node_modules/webpack-cli/bin/cli.js --display-error-details --progress --mode=production --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonyBogdanov/webpack-preload-chunks.git"
+  },
+  "author": "Tony Bogdanov <support@tonybogdanov.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TonyBogdanov/webpack-preload-chunks/issues"
+  },
+  "homepage": "https://github.com/TonyBogdanov/webpack-preload-chunks#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "network-idle-callback": "^1.0.1",
+    "webpack-inject-plugin": "^1.5.4",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

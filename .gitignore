@@ -1,0 +1,4 @@
+/node_modules/
+/example/build/
+/example/sw.js
+!/example/build/.gitkeep

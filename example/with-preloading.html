@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example with preloading</title>
+    <style>
+        body { font-family: sans-serif; }
+        table, th, td { border: 1px solid; }
+        th, td { padding: 1rem; }
+    </style>
+</head>
+<body>
+
+<p>This is an example <strong>without</strong> preloading.</p>
+<p>All chunks will start loading at the moment they are requested, the log below will show how much time
+    (in milliseconds) passed from the time the asset was requested till the time it was executed.</p>
+
+<p>You could also slow down your network from the developer console to see a more noticeable difference.</p>
+
+<button type="button" id="start">Start Test</button>&nbsp;
+<a href="./without-preloading.html">or open the test with preloading disabled</a>
+<br/><br/>
+
+<table>
+    <thead>
+    <tr>
+        <th>Asset</th>
+        <th>Requested At</th>
+        <th>Executed At</th>
+        <th>Delay</th>
+    </tr>
+    </thead>
+    <tbody id="log"></tbody>
+</table>
+
+<script src="build/with-preloading.js"></script>
+
+</body>
+</html>
