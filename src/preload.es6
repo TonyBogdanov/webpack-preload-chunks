@@ -7,6 +7,12 @@ let processing = false;
 
 const register = async () => {
 
+    if ( ! ( 'serviceWorker' in navigator ) ) {
+
+        return false;
+
+    }
+
     const resolve = async () => {
 
         const registration = await navigator.serviceWorker.getRegistration();
@@ -71,7 +77,12 @@ const enqueue = async path => {
 
 ( async () => {
 
-    await register();
+    if ( ! ( await register() ) ) {
+
+        return;
+
+    }
+
     await enqueue( '/* WEBPACK_CHUNKS_PATH */' );
 
 } )();

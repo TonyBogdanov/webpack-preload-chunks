@@ -1,6 +1,6 @@
 {
   "name": "webpack-preload-chunks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack plugin for preloading chunk assets during network idling",
   "main": "src/plugin.es6",
   "scripts": {
