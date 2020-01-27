@@ -1,3 +1,9 @@
+if ( ! ( 'serviceWorker' in navigator ) ) {
+
+    return;
+
+}
+
 import { networkIdleCallback } from 'network-idle-callback';
 
 const loaded = window.__webpackPreloadedChunks = window.__webpackPreloadedChunks || [];
@@ -6,12 +12,6 @@ const queue = [];
 let processing = false;
 
 const register = async () => {
-
-    if ( ! ( 'serviceWorker' in navigator ) ) {
-
-        return false;
-
-    }
 
     const resolve = async () => {
 
@@ -77,12 +77,7 @@ const enqueue = async path => {
 
 ( async () => {
 
-    if ( ! ( await register() ) ) {
-
-        return;
-
-    }
-
+    await register();
     await enqueue( '/* WEBPACK_CHUNKS_PATH */' );
 
 } )();
